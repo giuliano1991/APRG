@@ -1,0 +1,231 @@
+body {
+    color: #000305;
+    font-size: 87.5%;
+    font-family: Arial, 'Lucida Sans Unicode';
+    line-height: 1.5; 
+    text-align: left;
+
+    background-image: url("../images/Header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-color: #000;
+
+    width: 1000px;
+    margin: 0 auto;
+    clear:both;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #810000;
+}
+
+a:hover, a:active {
+    background-color: #810000;
+    color: #FFF;
+}
+
+.mainheader nav {
+    text-align: center;
+    margin-top: 200px;
+    background-color: #fe9a0b;
+    height: 40px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.mainheader nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainheader nav ul li {
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mainheader nav a:link, .mainheader nav a:visited {
+    color: #FFF;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 20px;
+}
+
+.mainheader nav a:hover, .mainheader nav a:active, .mainheader nav .active a:link, .mainheader nav .active a:visited{
+    background-color: #810000;
+    text-shadow: none;
+}
+
+.mainheader nav ul li a {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.main {
+    margin-top: 2%;
+    line-height: 25px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: white;
+    overflow: auto;
+}
+
+.content {
+    width: 70%;
+    float: left;
+}
+
+.post {
+    padding: 0% 5%;
+}
+
+.post-info {
+    font-style: italic;
+    color: #999;
+    font-size: 90%
+}
+
+.reg-info {
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-size: 90%
+}
+
+.top-sidebar {
+    width: 21%;
+    float: left;
+    margin: 2% 0 2% 3%;
+    padding: 2% 3%;
+}
+
+.middle-sidebar {
+    width: 21%;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    padding: 2% 3%;
+
+}
+
+.bottom-sidebar {
+    width: 21%;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    padding: 2% 3%;
+}
+
+.footer{
+    width: 100%;
+    height: 40px;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #fe9a0b;
+    margin-top: 2%;
+}
+
+footer p {
+    width: 92%;
+    margin: 10px auto;
+    color: #FFF;
+}
+
+textarea {
+ width: 400px;
+ height: 80px;
+ resize: none;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #282828;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.comment-box {
+    width: 845px;
+    padding: 20px;
+    margin-bottom: 4px;
+    background-color: #999;
+    border-radius: 4px;
+}
+
+.comment-box p {
+    line-height: 16px;
+    color: black;
+}
+@media only screen and (min-width: 150px) and (max-width: 600px)
+{
+    .body{
+        width: 90%;
+        font-size:  95%;
+    }
+    
+    .mainheader img{
+    width: 100%;
+    }
+    
+    .mainheader nav {
+    height: 200px;
+    }
+
+    .mainheader nav ul {
+        padding-left: 0;
+    }
+
+    .mainheader nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mainheader nav a:link, .mainheader nav a:visited {
+        padding: 10px 25px;
+        height: 20px;
+        display: block;
+    }
+    
+    .content {
+    width: 100%;
+    float: left;
+        margin-top: 2%;
+    }
+
+    .post-info {
+        display: none;
+    }
+    
+    .topcontent {
+        background-color: #FFF;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        padding: 3% 5%;
+        margin-top: 4%;
+    }
+    .bottomcontent {
+        margin-top: 3%;
+    }
+    
+    .top-sidebar, .middle-sidebar, .bottom-sidebar {
+        width: 94%;
+        margin: 2% 0 2% 0;
+        padding: 2% 3%;
+    }
+}
