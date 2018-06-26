@@ -1,0 +1,15 @@
+Tabelle posts
+	id_post
+	title
+	body
+	description
+	date
+	author
+	information
+	mainimage
+	comments
+
+Tabelle users
+	id_user
+	username
+	password
