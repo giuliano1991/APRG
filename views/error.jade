@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    .content(style='text-align: center; margin: 0px; width: 1000px')
+        h1= message
+        h2= error.status
+        pre #{error.stack}

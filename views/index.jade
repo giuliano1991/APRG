@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	.content
+		if posts
+			each post, i in posts
+				.post
+					header
+						h2
+							a(href='/posts/show/#{post.id_posts}')
+								=post.title
+					footer
+						p.post-info Geposted von #{post.author} am #{moment(post.date).format("DD-MM-YYYY")}
+					content
+						!=post.description
+						br
+						a.more(href='/posts/show/#{post.id_posts}') Mehr lesen
+						br
+						hr
+		else
+			p Es wurden bis jetzt nichts gepostet
+	aside.top-sidebar
+		if user
+			h2 Abmelden
+			p Sie sind gerade eingeloggt. Zum ausloggen einfach auf den Button ausloggen klicken
+			form(method='post', action='users/logout')
+				button(type='submit', name='logout') Logout
+		else
+			form(method='post', action='users/login')
+				h2 Anmelden
+				input(type='text', name='username')
+				input(type='password', name='password')
+				button(type='submit', name='loginSubmit') Login
+				p.reg-info
+					| Hier geht es zur 
+					a(href='/users/register') Registrierung
+	aside.middle-sidebar
+		article
+			h2 Folgt uns auf unsern Social Media Seiten!
+			a(href='#', title='Facebook')
+				img(src="/images/Facebook.png", alt="Facebook", style='width:65px;height:65px;')
+			a(href='#', title='Twitter')
+				img(src="/images/Twitter.png", alt="Twitter", style='width:65px;height:65px;')
+			a(href='#', title='Youtube')
+				img(src="/images/Youtube.png", alt="Youtube", style='width:65px;height:65px;')

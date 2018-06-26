@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    .content
+        article.post
+            header
+                h2(style='color: #810000;')
+                    =post.title
+            footer
+                p.post-info Geposted von #{post.author} am #{moment(post.date).format("DD-MM-YYYY")}
+            content
+                !=post.body
+                br
+                hr
+                if comments
+                    h3 Kommentare
+                    each comment, i in comments
+                        .comment
+                            p.comment-name #{comment.username} am #{moment(comment.date).format("DD-MM-YYYY")}
+                            p #{comment.comment}
+                            br
+                            hr
+                    br
+                if user
+                    h3 Kommentar hinzufügen
+                    if errors
+                        ul.errors
+                            each error, i in errors
+                                li.alert.alert-danger #{error.msg}
+                    form.comment-form(method='post', action='/posts/addcomment')
+                        input(name='postid', type='hidden', value='#{post.id_posts}')
+                        input(type='hidden', name='name', value='#{user}')
+                        textarea.form-control(name='body', id='body')
+                        br
+                        input.btn.btn-default(name='submit', type='submit', value='Kommentieren')
+                else
+                    h3 Du musst dich anmelden um zu kommentieren
+    aside.top-sidebar
+        img(src='/images/noimage.jpg', style='width: 100%; height: 100%;')
+        br
+        !=post.information
